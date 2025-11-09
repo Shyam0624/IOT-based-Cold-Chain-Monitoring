@@ -1,0 +1,632 @@
+[
+    {
+        "id": "ed4fa1c2a8769173",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9c658deee214af02",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "1ed195f1f634d334",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094ce",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "5b1e75e7c4ea076f",
+        "type": "ui-page",
+        "name": "Home",
+        "ui": "9c658deee214af02",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "1ed195f1f634d334",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "12"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "<style>    body {  background-image: linear-gradient(to bottom,  #f4f7f6,#ffffff) background-repeat: no-repeat; background-attachment: fixed;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif; } </style>",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "f42b588db8b7ef5b",
+        "type": "ui-group",
+        "name": "Chart",
+        "page": "5b1e75e7c4ea076f",
+        "width": "6",
+        "height": "1",
+        "order": 2,
+        "showTitle": false,
+        "className": "<style>   .widget-card {     /* Fades from your new color to white */     background-image: linear-gradient(to bottom, #bca88e, #ffffff);     background-repeat: no-repeat;     background-attachment: fixed;          border-radius: 8px !important;     box-shadow: 0 4px 12px rgba(0,0,0,0.05);     border: 1px solid #eee;   } </style>",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "56d7872aec39130e",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "3ded429b0402391f",
+        "type": "mqtt-broker",
+        "name": "MQTT-broker",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "tls": "56d7872aec39130e",
+        "clientid": "NodeRedDashboard",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "fa4b8dd747e270b7",
+        "type": "ui-group",
+        "name": "The Header",
+        "page": "5b1e75e7c4ea076f",
+        "width": "12",
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "<style>   .widget-card{  background-image: linear-gradient(to bottom, #bca88e, #ffffff);     background-repeat: no-repeat;     background-attachment: fixed;          border-radius: 8px !important;     box-shadow: 0 4px 12px rgba(0,0,0,0.05);     border: 1px solid #eee;   } </style>",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0d0e8483355aed55",
+        "type": "ui-group",
+        "name": "Guage",
+        "page": "5b1e75e7c4ea076f",
+        "width": 6,
+        "height": 1,
+        "order": 3,
+        "showTitle": false,
+        "className": "<style>   .widget-card {     /* Fades from your new color to white */     background-image: linear-gradient(to bottom, #bca88e, #ffffff);     background-repeat: no-repeat;     background-attachment: fixed;          border-radius: 8px !important;     box-shadow: 0 4px 12px rgba(0,0,0,0.05);     border: 1px solid #eee;   } </style>",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "21abc0e16ef75e34",
+        "type": "mqtt in",
+        "z": "ed4fa1c2a8769173",
+        "name": "Listen for Location",
+        "topic": "coldchain/truck_001/location",
+        "qos": "0",
+        "datatype": "json",
+        "broker": "3ded429b0402391f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 220,
+        "wires": [
+            [
+                "e680639e96e515d9"
+            ]
+        ]
+    },
+    {
+        "id": "e680639e96e515d9",
+        "type": "change",
+        "z": "ed4fa1c2a8769173",
+        "name": "Format for Map",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.location",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 220,
+        "wires": [
+            [
+                "34cb351e0bbcbe77"
+            ]
+        ]
+    },
+    {
+        "id": "34cb351e0bbcbe77",
+        "type": "worldmap",
+        "z": "ed4fa1c2a8769173",
+        "name": "Truck 001",
+        "lat": "",
+        "lon": "",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c03d0b4bbadb44d5",
+        "type": "mqtt in",
+        "z": "ed4fa1c2a8769173",
+        "name": "Listen for Telemetry",
+        "topic": "coldchain/truck_001/telemetry",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "3ded429b0402391f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 340,
+        "wires": [
+            [
+                "1fef23fa5e98aa0c",
+                "5efb1c8a91f4e592"
+            ]
+        ]
+    },
+    {
+        "id": "1fef23fa5e98aa0c",
+        "type": "change",
+        "z": "ed4fa1c2a8769173",
+        "name": "Get Temperature",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 340,
+        "wires": [
+            [
+                "a7278751e69a6008",
+                "f825f1cb7373f874"
+            ]
+        ]
+    },
+    {
+        "id": "a7278751e69a6008",
+        "type": "ui-gauge",
+        "z": "ed4fa1c2a8769173",
+        "name": "Cargo Temperature",
+        "group": "0d0e8483355aed55",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "6",
+        "height": "8",
+        "gtype": "gauge-34",
+        "gstyle": "needle",
+        "title": "Temperature Gauge",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "° C",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "4",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "7",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": 10,
+        "sizeThickness": "14",
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 650,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f825f1cb7373f874",
+        "type": "ui-chart",
+        "z": "ed4fa1c2a8769173",
+        "group": "f42b588db8b7ef5b",
+        "name": "Temperature Trend (10 min)",
+        "label": "chart",
+        "order": 1,
+        "chartType": "line",
+        "category": "topic",
+        "categoryType": "msg",
+        "xAxisLabel": "",
+        "xAxisProperty": "",
+        "xAxisPropertyType": "timestamp",
+        "xAxisType": "time",
+        "xAxisFormat": "",
+        "xAxisFormatType": "auto",
+        "xmin": "",
+        "xmax": "",
+        "yAxisLabel": "",
+        "yAxisProperty": "payload",
+        "yAxisPropertyType": "msg",
+        "ymin": "",
+        "ymax": "",
+        "bins": 10,
+        "action": "append",
+        "stackSeries": false,
+        "pointShape": "circle",
+        "pointRadius": 4,
+        "showLegend": true,
+        "removeOlder": "10",
+        "removeOlderUnit": "60",
+        "removeOlderPoints": "",
+        "colors": [
+            "#0095ff",
+            "#ff0000",
+            "#ff7f0e",
+            "#2ca02c",
+            "#a347e1",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "textColor": [
+            "#666666"
+        ],
+        "textColorDefault": true,
+        "gridColor": [
+            "#e5e5e5"
+        ],
+        "gridColorDefault": true,
+        "width": 6,
+        "height": 8,
+        "className": "",
+        "interpolation": "linear",
+        "x": 680,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "831a9e699b0334c0",
+        "type": "mqtt in",
+        "z": "ed4fa1c2a8769173",
+        "name": "Listen for Alerts",
+        "topic": "coldchain/truck_001/alert",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "3ded429b0402391f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 520,
+        "wires": [
+            [
+                "6189d64aa186dfa3"
+            ]
+        ]
+    },
+    {
+        "id": "6189d64aa186dfa3",
+        "type": "change",
+        "z": "ed4fa1c2a8769173",
+        "name": "Get Alert Message",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.message",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 520,
+        "wires": [
+            [
+                "ef70966609989863"
+            ]
+        ]
+    },
+    {
+        "id": "ef70966609989863",
+        "type": "ui-notification",
+        "z": "ed4fa1c2a8769173",
+        "ui": "9c658deee214af02",
+        "position": "center center",
+        "colorDefault": true,
+        "color": "#000000",
+        "displayTime": "3",
+        "showCountdown": true,
+        "outputs": 1,
+        "allowDismiss": true,
+        "dismissText": "Acknowledge",
+        "allowConfirm": false,
+        "confirmText": "Confirm",
+        "raw": false,
+        "className": "",
+        "name": "Alert message",
+        "x": 640,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b62e1b6a6025cb85",
+        "type": "ui-button",
+        "z": "ed4fa1c2a8769173",
+        "group": "fa4b8dd747e270b7",
+        "name": "Reboot A/C",
+        "label": "Reboot A/C",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "<style>     .nr-dashboard-button .md-button {         border-radius: 6px; /* Slightly rounded button */         box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */         transition: all 0.2s ease; /* Smooth hover effect */     }          .nr-dashboard-button .md-button:hover {         box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Lift effect on hover */         transform: translateY(-1px);     } </style>",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "{\"command\":\"reboot\"}",
+        "payloadType": "json",
+        "topic": "coldchain/truck_001/command",
+        "topicType": "str",
+        "buttonColor": "#6DBB92",
+        "textColor": "#924545",
+        "iconColor": "black",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 230,
+        "y": 640,
+        "wires": [
+            [
+                "85226441e05c73fc"
+            ]
+        ]
+    },
+    {
+        "id": "85226441e05c73fc",
+        "type": "mqtt out",
+        "z": "ed4fa1c2a8769173",
+        "name": "Send Command",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3ded429b0402391f",
+        "x": 420,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "5efb1c8a91f4e592",
+        "type": "change",
+        "z": "ed4fa1c2a8769173",
+        "name": "Get Door Status",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.door_open",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 440,
+        "wires": [
+            [
+                "c6ebf82a6bb7ab70"
+            ]
+        ]
+    },
+    {
+        "id": "c6ebf82a6bb7ab70",
+        "type": "ui-text",
+        "z": "ed4fa1c2a8769173",
+        "group": "fa4b8dd747e270b7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Door Status",
+        "label": "Door Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "20",
+        "color": "#924545",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 650,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "fa7aac75acce116d",
+        "type": "ui-text",
+        "z": "ed4fa1c2a8769173",
+        "group": "fa4b8dd747e270b7",
+        "order": 1,
+        "width": "12",
+        "height": "1",
+        "name": "Header",
+        "label": "Vaccine Cold Chain Monitoring",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "Times New Roman,Times,serif",
+        "fontSize": "20",
+        "color": "#924545",
+        "wrapText": true,
+        "className": "<style>{font-size: 1.5em;}</style>",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 420,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6651f563467d291d",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.29.0",
+            "node-red-contrib-web-worldmap": "5.5.3"
+        }
+    }
+]
