@@ -1,0 +1,35 @@
+# ...existing code...
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+env/
+venv/
+.env
+.python-version
+
+# MicroPython / Wokwi
+*.mpy
+.wokwi/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment files
+.env
+
+# Node
+node_modules/
+
+# Logs
+*.log
+
